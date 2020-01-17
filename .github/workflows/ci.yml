@@ -19,12 +19,14 @@ jobs:
       uses: actions/setup-ruby@v1
       with:
         ruby-version: 2.6.x
+      env:
+        token_heroku: ${{ secrets.HEROKU_STAGING_API_KEY}}
     - name: deploy site
       run: |
         apt-get update -qy
         apt-get install -yqq ruby ruby-dev nodejs --silent
         gem install dpl
-        dpl --provider=heroku --app=ipssi-test2 --api-key=${{ secrets.HEROKU_STAGING_API_KEY}}
+        dpl --provider=heroku --app=ipssi-test2 --api-key=$token_heroku
 
 
 
