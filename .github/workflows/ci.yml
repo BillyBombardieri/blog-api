@@ -7,5 +7,6 @@ jobs:
     runs-on: ubuntu-latest  
     container: hadolint/hadolint
     steps:
+    - uses: actions/checkout@v1
     - name: image docker
       run: hadolint Dockerfile
