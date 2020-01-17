@@ -1,9 +1,11 @@
 name: tests
+on: push
 
 jobs:
   hadolint:
     name: image docker
+    runs-on: ubuntu-latest  
     container: hadolint/hadolint
     steps:
-      - name: image docker
+    - uses: actions/checkout@v1
         run: hadolint Dockerfile
