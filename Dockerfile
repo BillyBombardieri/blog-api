@@ -25,7 +25,7 @@ WORKDIR /srv/api
 #ENTRYPOINT ["docker-entrypoint"]
 #CMD ["php-fpm"]
 
-FROM base_php as php_dev
+FROM base_php a php_dev
 
 COPY --from=composer /usr/bin/composer /usr/bin/composer
 
