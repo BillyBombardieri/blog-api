@@ -19,7 +19,7 @@ jobs:
     - uses: actions/checkout@v2
     - name: test unitaires
       run: |
-        sudo composer install
+        composer install
         bin/phpunit
       
   deploy:
