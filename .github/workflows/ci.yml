@@ -39,8 +39,8 @@ jobs:
       env:
         token_heroku: ${{ secrets.HEROKU_STAGING_API_KEY}}
       run: |
-        sudo gem install dpl
-        sudo dpl --provider=heroku --app=ipssi-test2 --api-key=$token_heroku
+        gem install dpl
+        dpl --provider=heroku --app=ipssi-test2 --api-key=$token_heroku
 
 
 
