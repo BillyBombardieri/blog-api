@@ -19,9 +19,9 @@ jobs:
       uses: actions/setup-ruby@v1
       with:
         ruby-version: 2.6.x
+    - name: deploy site
       env:
         token_heroku: ${{ secrets.HEROKU_STAGING_API_KEY}}
-    - name: deploy site
       run: |
         apt-get update -qy
         apt-get install -yqq ruby ruby-dev nodejs --silent
