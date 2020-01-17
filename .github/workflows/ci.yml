@@ -11,6 +11,17 @@ jobs:
     - name: image docker
       run: hadolint Dockerfile
 
+  test:
+    name: unit_test
+    runs-on: ubuntu-latest
+    container: billybilly60/blog_php
+    steps:
+    - uses: actions/checkout@v2
+    - name: test unitaires
+      run: |
+        sudo composer install
+        bin/phpunit
+      
   deploy:
     runs-on: ubuntu-latest
     steps:
