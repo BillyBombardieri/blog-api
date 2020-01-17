@@ -11,7 +11,7 @@ jobs:
     - name: image docker
       run: hadolint Dockerfile
 
-jobs:
+jobs2:
   deploy:
     runs-on: ubuntu-latest
     steps:
